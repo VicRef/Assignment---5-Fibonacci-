@@ -13,21 +13,48 @@ clear()
 # The desired output is like :
 # fibonacci →  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
-x = int(input("Please enter the starting value: "))
-y = int(input("Please enter the second value: "))
-z = int(input("Please enter the max. fibbonaci value: "))
 
-total_x_y = 0
 
-fibonacci = [x, y]
+f = 1
+s = 1
 
-while total_x_y < z:
-    total_x_y = x + y
-    fibonacci.append(total_x_y)
-    x = y
-    y = total_x_y
+fibonacci = [f,s]
+
+for i in range(2,10):
+
+    f,s = s, f+s
+
+    fibonacci.append(s)
 
 print(fibonacci)
+
+
+
+
+# x = int(input("Please enter the first number: "))
+# y = int(input("Please enter the second number: "))
+
+# z = int(input("Please enter the max. fibbonaci value: "))
+
+# total_x_y = 0
+
+# fibonacci = [x, y]
+
+# while total_x_y < z:
+#     total_x_y = x + y
+#     fibonacci.append(total_x_y)
+#     x = y
+#     y = total_x_y
+
+# fibonacci.pop()
+# print(fibonacci)
+
+# 1  1 
+# 1 + 1 = 2
+
+# x,        y,          total_x_y
+# 1,        1,          2
+#           x           y               total_x_y
 
 
 
